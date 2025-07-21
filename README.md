@@ -1,4 +1,4 @@
-# 🧠 JS Practice Platform
+# JS Practice Platform
 
 An interactive JavaScript coding platform for practicing interview-style coding problems in the browser. Built with CodeMirror, this tool supports live code editing, linting, formatting, theming, and saving progress locally.
 
