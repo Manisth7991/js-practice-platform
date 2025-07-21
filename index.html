@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JS Interview Practice Platform</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- CodeMirror base styles -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/codemirror.min.css" />
+
+  <!-- Dracula Theme (Dark) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/theme/dracula.min.css" />
+
+  <!-- CodeMirror Hinting & Linting CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/addon/hint/show-hint.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/addon/lint/lint.min.css" />
+
+  <!-- CodeMirror Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/codemirror.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/mode/javascript/javascript.min.js"></script>
+
+  <!-- Hinting (Autocomplete) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/addon/hint/show-hint.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/addon/hint/javascript-hint.min.js"></script>
+
+  <!-- Linting Support -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/addon/lint/lint.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/addon/lint/javascript-lint.min.js"></script>
+
+  <!-- Linting Engine -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jshint/2.13.6/jshint.min.js"></script>
+
+  <!-- Formatter -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/js-beautify/1.14.7/beautify.min.js"></script>
+</head>
+<body>
+  <div id="app">
+    <h1>🧠 JS Practice Platform</h1>
+
+    <!-- Question List Panel -->
+    <div id="question-list"></div>
+
+    <!-- Editor + Info Panel -->
+    <div id="editor-section" style="display: none;">
+      <h2 id="question-title"></h2>
+      <p id="question-desc"></p>
+
+      <!-- CodeMirror will mount here -->
+      <div id="editor"></div>
+
+      <!-- Action Buttons -->
+      <div class="actions">
+        <button id="run-code">▶️ Run Code</button>
+        <button id="save-code">💾 Save</button>
+        <button id="format-code">🎯 Format Code</button>
+      </div>
+
+      <!-- Output -->
+      <h3>🧾 Output:</h3>
+      <pre id="output"></pre>
+    </div>
+
+    <!-- Theme Switcher -->
+    <div class="theme-switcher">
+        <label for="theme-select">Theme:</label>
+        <select id="theme-select">
+            <option value="default">Light (Default)</option>
+            <option value="dracula">Dark (Dracula)</option>
+        </select>
+    </div>
+
+
+  <!-- App Scripts -->
+  <script src="data/questions.js"></script>
+  <script src="utils/storage.js"></script>
+  <script src="utils/runner.js"></script>
+  <script src="components/editor.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

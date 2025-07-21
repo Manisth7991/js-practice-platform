@@ -1,0 +1,131 @@
+/* Global Styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f5f7fa;
+  margin: 0;
+  padding: 2rem;
+  color: #333;
+}
+
+/* Container */
+#app {
+  max-width: 960px;
+  margin: auto;
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Question List */
+#question-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 1rem;
+}
+
+#question-list button {
+  flex: 1 1 30%;
+  min-width: 120px;
+  padding: 10px 12px;
+  background: #e0e7ff;
+  border: 1px solid #c7d2fe;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+#question-list button:hover {
+  background: #c7d2fe;
+}
+
+/* Editor Container */
+#editor {
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-top: 12px;
+  height: 300px;
+  overflow: hidden;
+}
+
+/* Actions (Run/Save/Format) */
+.actions {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* Buttons */
+button {
+  padding: 10px 20px;
+  background-color: #2563eb;
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #1d4ed8;
+}
+
+/* Output Area */
+#output {
+  background: #1e1e1e;
+  color: #00ff00;
+  padding: 1rem;
+  border-radius: 6px;
+  margin-top: 1rem;
+  font-family: 'Courier New', monospace;
+  height: 180px;
+  overflow-y: auto;
+  white-space: pre-wrap;
+}
+
+/* Title and Description */
+#question-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+#question-desc {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  color: #555;
+}
+
+/* Theme selector */
+#theme-select {
+  padding: 8px;
+  border-radius: 5px;
+  margin-left: 0.5rem;
+}
+
+.theme-switcher {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+
+/* Responsive */
+@media (max-width: 600px) {
+  .actions {
+    flex-direction: column;
+  }
+
+  #question-list {
+    flex-direction: column;
+  }
+
+  #question-list button {
+    width: 100%;
+  }
+}
